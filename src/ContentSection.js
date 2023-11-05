@@ -45,7 +45,7 @@ const ContentSection = (props) => {
             ))
           : "None"}
       </div>
-      <button onClick={downloadPdfDocument}>Download as PDF</button>
+      <button className="button" onClick={downloadPdfDocument}>Download as PDF</button>
     </div>
   );
 };
