@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.material-icons {
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.material-icons:hover {
+  color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Make sure html and body are also taking the full viewport height */
+}
+
+.header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 60px;
+  padding: 15px;
+  background-color: #2f4f4f;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header button {
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-section {
+  display: flex;
+}
+
+.edit-section {
+  padding: 15px;
+  min-height: calc(100vh - 60px);
+  background-color: lightsteelblue;
+  transition: width 0.1s ease-in-out; /* Smooth transition for the width */
+}
+
+.edit-section.open {
+  width: 30%;
+}
+
+.edit-section.closed {
+  width: 0;
+  padding: 0; /* Eliminate padding when closed for a cleaner look */
+}
+
+.study,
+.work,
+.study-info-title,
+.work-info-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form-input #textInput {
+  width: 230px;
+}
+
+.input-label {
+  width: 140px; /* Adjust the width as needed */
+  min-width: 140px; /* This ensures that the width does not shrink */
+  text-align: left;
+  margin-right: 10px; /* Adjust spacing between label and input */
+}
+
+.expand {
+  background-color: lightsteelblue;
+  min-height: calc(100vh - 60px);
+  width: 20px;
+  display: flex;
+  align-items: center; /* This aligns children vertically in the center */
+  justify-content: center; /* This aligns children horizontally in the center */
+}
+
+.content-section {
+  font-family: "Times New Roman", Times, serif;
+  flex-grow: 1; /* takes up the remaining space */
+  min-height: calc(100vh - 60px);
+  text-align: center;
+  padding: 15px;
+  background-color: white;
+}
+
+#to-pdf {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.button {
+  margin-top: 20px;
 }
